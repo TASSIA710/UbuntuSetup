@@ -9,6 +9,12 @@ Small bash script that will setup a factory-new Ubuntu 18.04 server with base pa
 
 
 
+# Running
+> To run the installer, simply type `bash <(curl https://cdn.tassilo.tk/generic/ubuntu_setup/install.sh)`.\
+> **Note:** This script requires you to be a root user.
+
+
+
 ## Configuration
 
 > **`CFG_HOSTNAME [REQUIRED]`**\
