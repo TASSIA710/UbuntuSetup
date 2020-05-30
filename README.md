@@ -1,4 +1,5 @@
 
+
 # Ubuntu Setup
 Small bash script that will setup a factory-new Ubuntu 18.04 server with base packages for you.
 
@@ -9,9 +10,11 @@ Small bash script that will setup a factory-new Ubuntu 18.04 server with base pa
 
 
 
-# Running
+## Running
 > To run the installer, simply type `bash <(curl https://cdn.tassilo.tk/generic/ubuntu_setup/install.sh)`.\
 > **Note:** This script requires you to be a root user.
+
+
 
 
 
@@ -142,3 +145,18 @@ Small bash script that will setup a factory-new Ubuntu 18.04 server with base pa
 - `php7.2-fpm`
 - `php7.2-curl`
 - `php7.2-zip`
+
+
+
+## DNS Configuration
+> Replace `127.0.0.1` with your servers IP address.\
+> Replace `example.com` with your domain.
+> 
+> DNS Records
+> -----------
+> | Type  | Hostname            | Value                    | TTL (seconds) |
+> | ----- | ------------------- | ------------------------ | ------------- |
+> | **A** | `@`.example.com     | *directs to* `127.0.0.1` | 3600          |
+> | **A** | `www`.example.com   | *directs to* `127.0.0.1` | 3600          |
+> | **A** | `pma`.example.com   | *directs to* `127.0.0.1` | 3600          |
+> | **A** | `panel`.example.com | *directs to* `127.0.0.1` | 3600          |
