@@ -674,8 +674,7 @@ set_done "011" "012"
 # Configure Pterodactyl Panel
 set_wip "011" "004"
 log "| Configuring Pterodactyl panel..."
-php artisan p:environment:setup
-# php artisan p:environment:setup --author=no-reply@$CFG_HOSTNAME --url=http://panel.$CFG_HOSTNAME --timezone=UTC --cache=redis --session=redis --queue=redis --redis-host=localhost --redis-pass="" --redis-port=6379 --no-interaction -vvv >> /var/www/html/output.txt 2>&1
+php artisan p:environment:setup --author=no-reply@$CFG_SELF_EMAIL --url=http://panel.$CFG_HOSTNAME --timezone=UTC --cache=redis --session=redis --queue=redis --redis-host=localhost --redis-pass="" --redis-port=6379 --no-interaction -vvv >> /var/www/html/output.txt 2>&1
 php artisan p:environment:database --host=127.0.0.1 --port=3306 --database=panel --username=pterodactyl --password=$CFG_PANEL_DB_PASSWORD --no-interaction -vvv >> /var/www/html/output.txt 2>&1
 php artisan p:environment:mail --driver=mail --email=no-reply@$CFG_HOSTNAME --from=$CFG_BRANDNAME --encryption=tls --no-interaction -vvv >> /var/www/html/output.txt 2>&1
 set_done "011" "004"
